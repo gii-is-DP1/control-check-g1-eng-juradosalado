@@ -16,6 +16,7 @@
 package org.springframework.samples.petclinic.pet;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -61,7 +62,7 @@ public class PetService {
 	}
 
 	@Transactional(readOnly = true)
-	public Collection<Pet> findAllPets() throws DataAccessException {
+	public List<Pet> findAllPets() throws DataAccessException {
 		return petRepository.findAll();
 	}
 
